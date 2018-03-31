@@ -1,0 +1,10 @@
+
+.DS_Store
+
+*.map
+*.log
+
+/dist
+s3-deploy-config.json
+
+node_modules
