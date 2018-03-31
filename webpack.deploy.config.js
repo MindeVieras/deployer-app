@@ -16,7 +16,7 @@ else {
 
 module.exports = {
     mode: 'production',
-    entry: './src/js/index.js',
+    entry: './src/js/index.jsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'app.min.js'
@@ -33,7 +33,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: ['babel-loader', 'eslint-loader']
             },
             {
                 test: /\.(css|scss)$/,

@@ -11,7 +11,7 @@ module.exports = {
         port: 8080
     },
     devtool: 'eval-source-map',
-    entry: './src/js/index.js',
+    entry: './src/js/index.jsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'app.min.js'
@@ -19,6 +19,7 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
+            Config: path.resolve(__dirname, 'src/js/config/'),
             Components: path.resolve(__dirname, 'src/js/components/'),
             Images: path.resolve(__dirname, 'assets/images/')
         }
@@ -28,7 +29,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: ['babel-loader', 'eslint-loader']
             },
             {
                 test: /\.(css|scss)$/,

@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'production',
-    entry: './src/js/index.js',
+    entry: './src/js/index.jsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'app.min.js'
@@ -20,27 +20,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: ['babel-loader', 'eslint-loader']
             },
             {
-                test: /\.jsx$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            },
-            {
-                test: /\.css$/,
-                use: [{
-                    loader: "style-loader"
-                }, {
-                    loader: "css-loader"
-                }, {
-                    loader: "sass-loader"
-                }]
-            },
-            {
-                test: /\.scss$/,
+                test: /\.(css|scss)$/,
                 use: [{
                     loader: "style-loader"
                 }, {
