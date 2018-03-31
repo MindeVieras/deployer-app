@@ -8,7 +8,7 @@
     "dev": "webpack --progress",
     "build": "webpack --config webpack.production.config.js --progress",
     "deploy": "webpack --config webpack.deploy.config.js --progress",
-    "clean": "rimraf node_modules && rimraf dist && npm install",
+    "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/MindeVieras/deployer-app#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "material-ui": "^0.20.0",
+    "normalize.css": "^8.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",
