@@ -14,9 +14,8 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit,
     minWidth: `300px`,
-    height: `255px`
+    marginTop: `20%`
   }
 })
 
@@ -24,7 +23,6 @@ const Login = ({ classes }) => (
   <Grid
     container
     justify="center"
-    alignItems="center"
     className={ classes.root }
   >
     <Grid item>
