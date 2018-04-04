@@ -14,6 +14,7 @@ const Home = () => {
           <p>
             <Link to="/contact" className="btn btn-primary my-2">Contact</Link>
             <Link to="/about" className="btn btn-secondary my-2">About</Link>
+            <Link to="/login" className="btn btn-secondary my-2">Logout</Link>
           </p>
         </div>
       </section>

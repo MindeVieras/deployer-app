@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import CssBaseline from 'material-ui/CssBaseline'
 
-import { store } from './helpers/store'
+import { store } from './helpers'
 import App from './App'
 
 const theme = createMuiTheme()

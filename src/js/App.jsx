@@ -1,11 +1,12 @@
 
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import WebFont from 'webfontloader'
 
 import PrivateRoute from './components/PrivateRoute'
 import { Login, Home, Error404 } from 'Components'
 
+import { history } from './helpers'
 // Load styles
 // import 'normalize.css/normalize.css'
 
@@ -32,7 +33,7 @@ class App extends Component {
 
   render() {
     return (            
-      <Router>
+      <Router history={ history }>
         <Switch>
           <PrivateRoute exact path="/" component={ Home } />
           <Route path="/login" component={ Login } />

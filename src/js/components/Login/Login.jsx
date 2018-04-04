@@ -1,11 +1,12 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import { withStyles } from 'material-ui/styles'
 import Grid from 'material-ui/Grid'
 import Paper from 'material-ui/Paper'
-import TextField from 'material-ui/TextField'
+
+import LoginForm from './LoginForm'
 
 const styles = theme => ({
   root: {
@@ -13,45 +14,26 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing.unit * 2,
-    minWidth: '300px'
+    paddingBottom: theme.spacing.unit,
+    minWidth: `300px`,
+    height: `255px`
   }
 })
 
-class Login extends Component {
-  constructor(props) {
-    super(props)
-
-  }
-
-  componentDidMount() {
-
-  }
-
-  render() {
-    const { classes } = this.props
-
-    return (
-      <Grid
-        container
-        justify="center"
-        alignItems="center"
-        className={ classes.root }
-      >
-        <Grid item>
-          <Paper elevation={ 4 } className={ classes.paper }>
-            <TextField
-              id="name"
-              label="Name"
-              value={'wedxa'}
-              onChange={() => console.log('oon change')}
-              margin="normal"
-            />
-          </Paper>
-        </Grid>
-      </Grid>
-    )
-  }
-}
+const Login = ({ classes }) => (
+  <Grid
+    container
+    justify="center"
+    alignItems="center"
+    className={ classes.root }
+  >
+    <Grid item>
+      <Paper elevation={ 10 } className={ classes.paper }>
+        <LoginForm />
+      </Paper>
+    </Grid>
+  </Grid>
+)
 
 Login.propTypes = {
   classes: PropTypes.object.isRequired
